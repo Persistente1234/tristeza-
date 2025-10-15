@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de VicPersi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Creador VicPersi</h1>
+        <div class="message-box">
+            <p id="message">Eres la persona más importante en mi vida.</p>
+        </div>
+        <button id="btn">Nuevo Mensaje</button>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
+</head>
+<body>
+    <audio id="bg-music" loop autoplay>
+        <source src="rap triste.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.body;
+            const audio = document.getElementById('bg-music');
+            
+            // Configurar audio
+            audio.volume = 0.4;
+            audio.play().catch(e => console.log("La reproducción automática no está permitida"));
+
+ document.addEventListener('click', function() {
+                audio.play().catch(e => console.log("Audio no pudo reproducirse"));
+            }, { once: true });
+        });
+    </script>
+</body>
+</html>
